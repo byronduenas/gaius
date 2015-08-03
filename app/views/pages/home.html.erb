@@ -21,23 +21,7 @@
   <% end %>
 </div>
 <a class="page-anchor" id="projects"></a>
-<div class="row full-width gallery">
-    <%  @project_folders.keys.each do |key|%>
-      <div class="small-6 large-3 columns gallery-column">
-        <ul class="clearing-thumbs clearing-feature" data-clearing>
-        <% images = @project_folders[key] %>
-        <% images.each_with_index do |image, index| %>
-            <% path = "projects/#{key}/#{image.split('/').last}"%>
-            <% if index == 0 %>
-                <li class="clearing-featured-img"><a href="<%= asset_path path%>"><%= image_tag path, :'data-caption' => "Project #{key} (#{index + 1})" %></a></li>
-            <% else %>
-                <li><a href="<%= asset_path path%>"><%= image_tag path, :'data-caption' => "Project #{key} (#{index + 1})"  %></a></li>
-            <% end %>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-</div>
+
 <a class="page-anchor" id="studio"></a>
 <div class="full-width bio">
   <div class="row">
