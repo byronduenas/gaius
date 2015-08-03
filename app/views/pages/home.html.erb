@@ -28,7 +28,7 @@
           <% images = @project_folders[key] %>
           <% images.each_with_index do |image, index| %>
               <% path = "projects/#{key}/#{image.split('/').last}"%>
-              <% if index == 0 %>
+              <% if image.split('/').last == "featured.jpg" %>
                   <li class="clearing-featured-img"><a href="<%= asset_path path%>"><%= image_tag path, :'data-caption' => "Project #{key} (#{index + 1})" %></a></li>
               <% else %>
                   <li><a href="<%= asset_path path%>"><%= image_tag path, :'data-caption' => "Project #{key} (#{index + 1})"  %></a></li>
